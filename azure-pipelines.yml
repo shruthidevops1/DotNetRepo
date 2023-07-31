@@ -30,15 +30,16 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'snyk'
-    testType: 'app'
-    monitorWhen: 'always'
-    failOnIssues: false
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snyk'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: false
