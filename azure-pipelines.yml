@@ -32,7 +32,7 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'snyk'
     testType: 'app'
-    targetFile: '$(Build.ArtifactStagingDirectory)'
+    targetFile: '$(Build.ArtifactStagingDirectory)//*.zip'
     monitorWhen: 'always'
     failOnIssues: false
 - task: PublishBuildArtifacts@1
