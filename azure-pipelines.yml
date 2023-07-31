@@ -37,6 +37,6 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'snyk'
     testType: 'app'
-    targetFile: '$(System.DefaultWorkingDirectory)\WebApplication1\WebApplication1\Web.config'
+    #targetFile: '$(System.DefaultWorkingDirectory)\WebApplication1\WebApplication1\Web.config'
     monitorWhen: 'always'
     failOnIssues: false
