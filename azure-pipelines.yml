@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'windows-latest'
+pool: 'Hosted Windows 2019 with VS2019'
+  #vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
