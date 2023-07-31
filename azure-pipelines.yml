@@ -37,6 +37,6 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'snyk'
     testType: 'app'
-    targetFile: '$(Build.ArtifactStagingDirectory)\drop\WebApp.zip'
+    targetFile: '$(System.DefaultWorkingDirectory)\a\1\s\WebApplication1\WebApplication1\Web.config'
     monitorWhen: 'always'
     failOnIssues: false
