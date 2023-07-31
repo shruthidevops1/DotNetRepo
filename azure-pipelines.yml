@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: 'Hosted VS2019 with Windows 2019'
+pool: 'Hosted Windows 2019 with VS2019'
   #vmImage: 'windows-latest'
 
 variables:
