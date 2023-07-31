@@ -28,15 +28,15 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'snyk'
-    testType: 'app'
-    targetFile: '$(Build.ArtifactStagingDirectory)\WebApp.zip'
-    monitorWhen: 'always'
-    failOnIssues: false
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snyk'
+    testType: 'app'
+    targetFile: '$(Build.ArtifactStagingDirectory)\drop\WebApp.zip'
+    monitorWhen: 'always'
+    failOnIssues: false
