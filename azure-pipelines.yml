@@ -27,13 +27,15 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'snyk'
     testType: 'app'
+    targetFile: 'D:\a\1\s\WebApplication1\WebApplication1.sln'
     monitorWhen: 'always'
     failOnIssues: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
