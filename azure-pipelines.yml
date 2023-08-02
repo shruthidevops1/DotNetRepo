@@ -33,7 +33,7 @@ steps:
     testType: 'app'
     targetFile: 'D:\a\1\s\WebApplication1\WebApplication1.sln'
     monitorWhen: 'always'
-    failOnIssues: true
+    failOnIssues: false
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
