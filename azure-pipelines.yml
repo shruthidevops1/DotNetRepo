@@ -37,7 +37,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'D:\a\1\s\WebApplication1\WebApplication1.zip'
+    SourceFolder: '$(Agent.BuildDirectory)'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
