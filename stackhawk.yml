@@ -1,11 +1,11 @@
-# -- stackhawk configuration for testapp --
+# -- stackhawk configuration for AishwaryaApp --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: dd9a224f-f783-4ac0-80f3-527a0a438a2e # (required)
+  applicationId: d732acf8-aea1-40de-90a3-6ddf3c199296 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
-  host: https://newtstwebap.azurewebsites.net # (required)
+  host: https://testwebappnew987.azurewebsites.net # (required)
 
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
